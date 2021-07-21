@@ -12,8 +12,8 @@ let path = {
   src: {
     html: [sourse_folder + "/*.html", "!" + sourse_folder + "/_*.html"],
     css: sourse_folder + "/scss/style.scss",
-    js: sourse_folder + "/js/script.js",
-    img: sourse_folder + "/img/**/*.+(png|jpg|gif|ico|webp)",
+    js: sourse_folder + "/js/*.js",
+    img: sourse_folder + "/img/**/*.+(png|jpg|gif|ico|webp|svg)",
     fonts: sourse_folder + "/fonts/",
   },
   watch: {
@@ -26,7 +26,6 @@ let path = {
 };
 const { src, dest } = require("gulp"),
   gulp = require("gulp"),
-  fileinclude = require("gulp-file-include"),
   browsersync = require("browser-sync").create(),
   del = require("del"),
   scss = require("gulp-sass")(require("sass")),
@@ -50,8 +49,6 @@ function browSersync(params) {
 }
 function html() {
   return src(path.src.html)
-    .pipe(fileinclude())
-    .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -83,7 +80,6 @@ function css() {
 
 function js() {
   return src(path.src.js)
-    .pipe(fileinclude())
     .pipe(dest(path.build.js))
     .pipe(uglify())
     .pipe(
@@ -116,17 +112,17 @@ function images() {
     .pipe(browsersync.stream());
 }
 
-function watchFiles(params) {
+function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
 }
-function clean(params) {
+function clean() {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browSersync);
 
 exports.images = images;
