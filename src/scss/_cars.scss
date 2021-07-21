@@ -1,0 +1,79 @@
+.cars {
+  width: 100%;
+  min-height: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 56px;
+    color: rgba(51, 51, 51, 1);
+  }
+  &__wrapper {
+    overflow: hidden;
+  }
+  &__box {
+    max-width: 70%;
+    position: relative;
+  }
+  .cars-slide {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+  .cars-pagination {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    bottom: -25px;
+    .swiper-pagination-total {
+      font-size: 20px;
+      color: rgba(189, 189, 189, 0.57);
+    }
+  }
+  .image-slider {
+    width: 500px;
+  }
+
+  .swiper-container-horizontal > .swiper-scrollbar {
+    width: 40%;
+    left: 30%;
+    bottom: 6px;
+    z-index: 50;
+    height: 5px;
+  }
+  .swiper-scrollbar-drag {
+    height: 10px;
+    width: 100%;
+    position: relative;
+    background: rgb(0 0 0);
+    left: 0;
+    top: -50%;
+    border-radius: 0;
+  }
+  .swiper-button-prev {
+    left: -55px;
+    color: rgba(51, 51, 51, 1);
+  }
+  .swiper-button-next {
+    right: -55px;
+    color: rgba(51, 51, 51, 1);
+  }
+  .cars__button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+}

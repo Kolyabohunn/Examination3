@@ -1,0 +1,108 @@
+.testimonials {
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 56px;
+    color: rgba(51, 51, 51, 1);
+  }
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  background: #ebf1f3;
+  &__box {
+    width: 80%;
+    position: relative;
+    .swiper-container {
+      position: unset;
+      .testimonials__desc {
+        width: 97%;
+        height: 310px;
+        background: white;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          font-family: "Roboto", sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 23px;
+          color: rgba(51, 51, 51, 1);
+        }
+        p {
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          color: rgba(79, 79, 79, 1);
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        p {
+          width: 85%;
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    bottom: -15%;
+    .swiper-pagination-total {
+      font-size: 20px;
+      color: rgba(189, 189, 189, 0.57);
+    }
+  }
+  .image-slider {
+    width: 500px;
+  }
+
+  .swiper-container-horizontal > .swiper-scrollbar {
+    width: 40%;
+    left: 30%;
+    bottom: -25%;
+    z-index: 50;
+    height: 5px;
+  }
+  .swiper-scrollbar-drag {
+    height: 10px;
+    width: 100%;
+    position: relative;
+    background: rgb(0 0 0);
+    left: 0;
+    top: -50%;
+    border-radius: 0;
+  }
+  .swiper-button-next {
+    right: -40px;
+    top: 165px;
+    color: rgba(51, 51, 51, 1);
+  }
+  .swiper-button-prev {
+    left: -40px;
+    top: 165px;
+    color: rgba(51, 51, 51, 1);
+  }
+  .testemotias__button {
+    margin: 55px 0 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

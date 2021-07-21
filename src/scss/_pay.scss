@@ -1,0 +1,104 @@
+.pay {
+  min-height: 750px;
+  text-align: center;
+  background: rgba(242, 242, 242, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 56px;
+    color: rgba(51, 51, 51, 1);
+  }
+  &__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgba(130, 130, 130, 1);
+  }
+  &__box {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    .pay__circle1 {
+      position: relative;
+      border: 4px solid rgba(75, 216, 181, 1);
+      border-radius: 68%;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        position: relative;
+        width: 150px;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 23px;
+        color: rgba(79, 79, 79, 1);
+      }
+    }
+    .pay__img {
+      width: 12%;
+      height: 80px;
+      margin-top: 65px;
+    }
+
+    .pay__circle2 {
+      p {
+        width: 150px;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 23px;
+        color: rgba(79, 79, 79, 1);
+      }
+      border: 4px solid rgba(75, 216, 181, 1);
+      border-radius: 68%;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .pay__circle3 {
+      p {
+        width: 150px;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 23px;
+        color: rgba(79, 79, 79, 1);
+      }
+      border: 4px solid rgba(75, 216, 181, 1);
+      border-radius: 68%;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .pay__button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

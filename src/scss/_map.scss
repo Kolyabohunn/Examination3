@@ -1,0 +1,10 @@
+.map__box {
+  display: flex;
+  justify-content: center;
+  background: rgba(242, 242, 242, 1);
+
+  #map {
+    height: 904px;
+    width: 80%;
+  }
+}

@@ -1,0 +1,164 @@
+.watch {
+  background: url("../img/k.1.jpg") 0% 95% no-repeat;
+  background-size: cover;
+  color: #fff;
+  width: 100%;
+  height: 940px;
+  &__slider {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+  &__slider::before {
+    content: "";
+    position: absolute;
+    border-top: 4px solid white;
+    width: 90%;
+    top: 50%;
+  }
+  &__slider::after {
+    content: "\27A4";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    top: 57%;
+    font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    transform: rotate(180deg);
+  }
+  &__slider-item {
+    text-align: center;
+    width: 200px;
+    img {
+      height: 100px;
+    }
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .slick-list {
+    overflow: hidden;
+    max-width: 900px;
+
+    .slick-center {
+      width: 270px;
+      img {
+        height: 150px;
+      }
+    }
+  }
+
+  .watch__box {
+    padding-left: 15%;
+    padding-top: 206px;
+    h1 {
+      font-family: "Roboto", sans-serif;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 104px;
+    }
+    .watch__button {
+      left: 0px;
+      top: 0px;
+      border-radius: 3px;
+      border: 0px solid #000;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    right: 365px;
+    bottom: -50%;
+    list-style-type: none;
+
+    button {
+      font-size: 0;
+      border: 1px solid rgb(255, 255, 255);
+      margin-left: 12px;
+      width: 3 20px;
+      height: 5px;
+      background-color: #fff;
+    }
+    button:focus {
+      background: gold;
+      border: 1px solid gold;
+    }
+  }
+  .pagingInfo {
+    position: absolute;
+    right: 470px;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 28px;
+    color: gold;
+  }
+  .slick-dots::after {
+    content: "";
+    border-bottom: 4px solid gold;
+    width: 300px;
+    bottom: -15px;
+    position: absolute;
+  }
+  .slick-dots::before {
+    content: "";
+    border-bottom: 4px solid gold;
+    width: 300px;
+    top: -5px;
+    position: absolute;
+  }
+  .watch__href {
+    padding-left: 11%;
+    .watch__href-items {
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  }
+}
+.button-active {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 21px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 245px;
+  height: 55px;
+  background: linear-gradient(
+    -45deg,
+    #2980b9,
+    #6dd5fa,
+    #72ffbd,
+    #db65ff,
+    #2980b9
+  );
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
